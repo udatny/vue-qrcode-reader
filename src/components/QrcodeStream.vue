@@ -44,8 +44,6 @@ export default {
       type: String,
       default: "auto",
       validator(camera) {
-        console.log("validating cam: " + camera);
-        return true;
         if (camera.startsWith("custom:")) {
           return true;
         }
