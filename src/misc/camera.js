@@ -52,6 +52,10 @@ const narrowDownFacingMode = async camera => {
       case "front":
         return { deviceId: { exact: frontCamera.deviceId } };
       default:
+        if (camera && camera.startsWith("custom:")) {
+          console.log("using custom cam id: " + camera.substring(str.indexOf(':') + 1))
+          return { deviceId: { exact: camera.substring(str.indexOf(':') + 1) } };
+        }
         return undefined;
     }
   } else {
@@ -63,6 +67,10 @@ const narrowDownFacingMode = async camera => {
       case "front":
         return { facingMode: { exact: "user" } };
       default:
+        if (camera && camera.startsWith("custom:")) {
+          console.log("using custom cam id: " + camera.substring(str.indexOf(':') + 1))
+          return { deviceId: { exact: camera.substring(str.indexOf(':') + 1) } };
+        }
         return undefined;
     }
   }
