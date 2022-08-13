@@ -45,6 +45,7 @@ export default {
       default: "auto",
 
       validator(camera) {
+        console.log("validating cam: " + camera);
         if (camera.startsWith("custom:")) {
           return true;
         }
