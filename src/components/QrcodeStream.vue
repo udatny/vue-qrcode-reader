@@ -5,7 +5,6 @@
     If z-index is not defined, elements are stacked in the order they appear in the DOM.
     The first element is at the very bottom and subsequent elements are added on top.
     -->
-    ud test
     <video
       ref="video"
       :class="{ 'qrcode-stream-camera--hidden': !shouldScan }"
