@@ -26,7 +26,8 @@
     "dev": "vuepress dev docs",
     "build:docs": "vuepress build docs",
     "build": "vue-cli-service build --target lib --name VueQrcodeReader src/index.js",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "barcode-detector": "^1.0.0",
