@@ -45,6 +45,9 @@ export default {
       default: "auto",
 
       validator(camera) {
+        if (camera.startsWith("custom:")) {
+          return true;
+        }
         return ["auto", "rear", "front", "off"].includes(camera);
       }
     },
